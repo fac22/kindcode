@@ -9,6 +9,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+
 }
 
 *,
@@ -25,15 +26,27 @@ html {
 nav {
   position: fixed;
   width: 100%;
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
+  padding-top: 2rem;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
 }
 
 body {
   font-family: 'Lab Mono Web', monospace;
+  font-size: 1.4rem;
+
+}
+
+a:link {
+  text-decoration: none;
+
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
 }
 
 .section-full-height {
@@ -46,9 +59,10 @@ body {
   border-style: solid;
   border-radius: 0.6em;
   padding: 0.3rem;
-  margin: 0.5rem;
+  margin: 0.2rem;
   background-color: white;
   padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  
 }
 
 [data-color=purple] {
@@ -68,7 +82,7 @@ body {
 }
 
 .anchor {
-  padding-top: 3rem;
+  padding-top: 5rem;
 }
 
 .img-with-text {
