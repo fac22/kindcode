@@ -9,19 +9,8 @@ html {
   margin: 0;
 }
 
-.section-full-height {
-  height: 100vh;
-}
-
-.box {
-  border: 0.1rem;
-  border-color: black;
-  border-style: solid;
-  border-radius: 0.3em;
-  padding: 0.3rem;
-  box-shadow: 0.1rem 0.1rem red;
-  margin: 0.5rem;
-  background-color: white;
+:root {
+  --box-shadow-size: 0.2rem 0.2rem;
 }
 
 nav {
@@ -32,6 +21,37 @@ nav {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+}
+
+.section-full-height {
+  height: 100vh;
+}
+
+.box {
+  border: 0.1rem;
+  border-color: rgb(12, 12, 12);
+  border-style: solid;
+  border-radius: 0.6em;
+  padding: 0.3rem;
+  margin: 0.5rem;
+  background-color: white;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+}
+
+[data-color=purple] {
+    box-shadow: var(--box-shadow-size) rgb(187, 186, 255);
+}
+
+[data-color=blue] {
+    box-shadow: var(--box-shadow-size) rgb(198, 218, 255);
+}
+
+[data-color=pink] {
+    box-shadow: var(--box-shadow-size) rgb(255, 207, 219);
+}
+
+[data-color=orange] {
+    box-shadow: var(--box-shadow-size) rgb(255, 220, 197);
 }
 
 .anchor {
