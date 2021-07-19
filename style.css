@@ -31,7 +31,7 @@ nav {
   padding-top: 2em;
   padding-left: 1.4em;
   padding-right: 2em;
-  font-size: 3vw;
+  font-size: min(4vw, 2em);
 }
 
 body {
