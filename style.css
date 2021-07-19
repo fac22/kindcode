@@ -1,7 +1,16 @@
+@font-face {
+  font-family: 'Lab Mono Web';
+  src: url( "lab-mono-font/labmono-regular-web.woff2" ) format( 'woff2' ),
+       url( "lab-mono-font/labmono-regular-web.woff" ) format( 'woff' );
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
 *,
 *:before,
 *:after {
@@ -21,6 +30,10 @@ nav {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+}
+
+body {
+  font-family: 'Lab Mono Web', monospace;
 }
 
 .section-full-height {
