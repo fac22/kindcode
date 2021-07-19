@@ -1,34 +1,42 @@
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+.section-full-height {
+	height: 100vh;
 }
 
 .top-margin {
-  margin-top: 3rem;
+	margin-top: 3rem;
 }
 
 .box {
-  border: 0.1rem;
-  border-color: black;
-  border-style: solid;
-  border-radius: 0.3em;
-  padding: 0.3rem;
-  box-shadow: 0.1rem 0.1rem red;
-  margin: 0.5rem;
-  background-color: white;
+	border: 0.1rem;
+	border-color: black;
+	border-style: solid;
+	border-radius: 0.3em;
+	padding: 0.3rem;
+	box-shadow: 0.1rem 0.1rem red;
+	margin: 0.5rem;
+	background-color: white;
 }
 
 nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1rem;
+}
+
+.anchor {
+	padding-top: 3rem;
 }
