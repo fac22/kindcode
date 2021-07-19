@@ -28,9 +28,10 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding-top: 2rem;
-  padding-left: 1.4rem;
-  padding-right: 1.4rem;
+  padding-top: 2em;
+  padding-left: 1.4em;
+  padding-right: 2em;
+  font-size: 3vw;
 }
 
 body {
