@@ -53,6 +53,17 @@ a:visited {
   height: 100vh;
 }
 
+h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1em;
+   font-weight: normal;
+}
+
 .box {
   border: 0.1rem;
   border-color: rgb(12, 12, 12);
@@ -90,12 +101,15 @@ a:visited {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  padding: 5vw;
 }
 
 .img-with-text__text {
+  padding: 3vw;
   max-width: 67%;
 }
 
 .img-with-text__img {
+  padding: 3vw;
   width: 33%;
 }
