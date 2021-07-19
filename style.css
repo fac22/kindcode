@@ -31,7 +31,7 @@ nav {
   padding-top: 2em;
   padding-left: 1.4em;
   padding-right: 2em;
-  font-size: min(4vw, 2em);
+  font-size: min(4vw, 1em);
 }
 
 body {
@@ -99,18 +99,36 @@ h2 {
 
 .img-with-text {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
   padding: 5vw;
 }
 
-.img-with-text__text {
-  padding: 3vw;
-  max-width: 67%;
+.img-with-text__img {
+  width: 80%;
+  height: auto;
 }
 
-.img-with-text__img {
-  padding: 3vw;
-  width: 33%;
+.img-with-text__text {
+  margin-top: 10%;
+  margin-bottom: 20%;
+}
+
+@media only screen and (min-width: 768px) {
+  .img-with-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5vw;
+  }
+
+  .img-with-text__img {
+    width: auto;
+    height: 75%;
+  }
+  
+  .img-with-text__text {
+    margin-top: 10%;
+    margin-bottom: 20%;
+  }
 }
