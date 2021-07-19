@@ -9,6 +9,18 @@ html {
   margin: 0;
 }
 
+@font-face {
+  font-family: 'Lab Mono Web';
+  src: url( "lab-mono-font/labmono-regular-web.woff2" ) format( 'woff2' ),
+       url( "lab-mono-font/labmono-regular-web.woff" ) format( 'woff' );
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Lab Mono Web', monospace;
+}
+
 .section-full-height {
   height: 100vh;
 }
