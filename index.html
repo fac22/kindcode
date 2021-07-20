@@ -19,141 +19,171 @@
 </head>
 
 <body>
+
+  <!-- ====NAVIGATION==== -->
   <nav>
-    <div>
-      <a href="" class="box" data-color="purple">kindCode</a>
-    </div>
+
+    <div><a href="" class="box box__nav--padding" data-color="purple">kindCode</a></div>
 
     <div>
-      <a href="#nav-about" class="box" data-color="pink">About</a>
+      <a href="#nav-about" class="box box__nav--padding" data-color="pink">About</a>
+      <a href="#nav-team" class="box box__nav--padding" data-color="orange">Team</a>
 
-      <a href="#nav-team" class="box" data-color="orange">Team</a>
-    </div>
   </nav>
+
+  <!-- ====NAVIGATION END==== -->
+
 
   <main>
 
-    <div class="section-full-height img-with-text">
-      <img src="./images/kindCode-about-illustration.png" alt="Illustration of person using a tablet device"
-        class="img-with-text__img" />
+    <section class="section__grid--left section__grid--margins section__grid--auto-rows">
 
-      <div class="img-with-text__text">
-        <h1 id="nav-home">kindCode</h1>
-
-        <p>
-          We make code kinder with only the kindest kind of kind AI.
-        </p>
+      <div class="section__grid--item1">
+        <img src="./images/kindCode-about-illustration.png" alt="Person with tablet device" />
       </div>
-    </div>
+
+      <div class="section__grid--item2">
+        <h1 id="nav-home">kindCode</h1>
+        <p>We make code kinder with only the kindest kind of kind AI.</p>
+      </div>
+
+    </section>
 
 
 
-    <section class="section-full-height">
-
-      <div class="flex img-with-text ">
+    <section class="section__margin--bottom">
 
 
-        <div class="img-with-text__text ">
+      <div class="section__grid--right section__grid--margins">
+
+        <div class="section__grid--item2">
+
           <h2 id="nav-about" class="anchor">About us</h2>
-          <p class="margin-top-2rem">
+
+          <p>
             Born in the early 2020s, we leveraged the power of AI to choose our
             name which in turn set the direction of our agency.
           </p>
 
-
-          <p class="margin-top-2rem">
+          <p>
             With AI at the start and the heart of our agency, we decided to harness the power of
             AI to make code kinder.
           </p>
 
-          <p>Here's our values:</p>
-
         </div>
-        <img src="./images/kindCode-contact-us-illustration.png" class="img-with-text__img"
-          alt="A generic image representing the concept of dynamism" />
+
+        <div class="section__grid--item1">
+          <img src="./images/kindCode-contact-us-illustration.png"
+            alt="A generic image representing the concept of dynamism" />
+        </div>
+
       </div>
 
-      <div class="flex padding-8vw flex-gap-2vw ">
+      <div class="section__grid--equal section__grid--margin-top section__grid--margins">
+
+        <article class="box section__grid--full-height box__card--padding" data-color="blue">
+          <h3>Dynamism</h3>
+          <p class="section__cards--font">We are all about future thinking activity and progress, with a hint of AI.</p>
+        </article>
+
+        <article class="box section__grid--full-height box__card--padding" data-color="pink">
+          <h3>Synergy</h3>
+          <p class="section__cards--font">We collaborate to create products greater than the sum of their parts.</p>
+        </article>
+
+        <article class="box section__grid--full-height box__card--padding" data-color="orange">
+          <h3>Velocity</h3>
+          <p class="section__cards--font">We like to move fast, make mistakes and then make it better </p>
+        </article>
+
+      </div>
+
+    </section>
 
 
-        <article class="box box-margin" data-color="blue">
+
+    <section>
 
 
-          <div class="flex">
-            <p>Dynamism A few words about that.</p>
+      <div class="section__grid--left section__grid--margins">
+
+        <div class="section__grid--item1">
+          <img src="./images/kindCode-splash-illustration.png" alt="Person with tablet device"
+            class="img__margin--bottom" />
+        </div>
+
+        <div class="section__grid--item2">
+          <h2 id="nav-team">The Team</h2>
+          <p>
+            Don't panic! It's not all AI and robots! We've got humans too. <br><br>
+            Let's meet them now..
+          </p>
+        </div>
+
+      </div>
+
+
+
+
+
+      <div class="section__grid--equal--2 section__grid--margin-top">
+
+        <article class="box section__grid--full-height box__card--padding" data-color="purple">
+          <div class="section__grid--left--profile">
+            <div class="section__profile"><img src="images/founder1.jpg" alt="A woman smiling." class="founder-img" />
+            </div>
+            <div>
+              <h3>Cool Name</h3>
+              <p class="section__cards--font">Head of Robots
+              </p>
+            </div>
           </div>
         </article>
 
-        <article class="box box-margin" data-color="pink">
-          <header>
-            <h2>Synergy</h2>
-
-            <img src="" alt="A generic image representing the concept of synergy" />
-          </header>
-
-          <p>More words about this equally nebulous concept.</p>
+        <article class="box section__grid--full-height box__card--padding" data-color="pink">
+          <div class="section__grid--left--profile">
+            <div class="section__profile"><img src="images/founder2.jpg" alt="A man smiling." class="founder-img" />
+            </div>
+            <div>
+              <h3>Great Name</h3>
+              <p class="section__cards--font">Head of AI
+              </p>
+            </div>
+          </div>
         </article>
-
-        <article class="box box-margin" data-color="orange">
-          <header>
-            <h2>Velocity</h2>
-
-            <img src="" alt="A generic image representing the concept of velocity" />
-          </header>
-
-          <p>We like the sound of this.</p>
-        </article>
-      </div>
 
       </div>
 
 
+
+
     </section>
 
-    <section class="section-full-height section-padding">
-      <h3 id="nav-team" class="anchor">The team</h3>
 
-      <p>
-        Don't panic! It's not all AI and robots! We've got humans too. Let's
-        meet them now:
-      </p>
-
-      <article class="box box-margin" data-color="purple">
-        <header>
-          <h4>Fictious Founder Number 1</h4>
-
-          <img src="" alt="An AI generated image of founder 1" />
-        </header>
-
-        <p>We like the sound of this.</p>
-      </article>
-
-      <article class="box box-margin" data-color="pink">
-        <header>
-          <h4>Fictious Founder Number 2</h4>
-
-          <img src="" alt="An AI generated image of founder 2" />
-        </header>
-
-        <p>We like the sound of this.</p>
-      </article>
-    </section>
   </main>
 
   <footer>
-    <p>© 2021 Definitely Not AIs Planning to Take Over the World Ltd.</p>
+    <div class="section__grid--equal--2x2 ">
+      <div class="box box box__nav--padding div1" data-color="purple">
+        <address>
+          kindCode<br />
+          128 The Web Road<br />
+          1010 The Internet<br />
+          Earth 🌎<br />
+        </address>
+      </div>
 
-    <address>
-      Definitely Not AIs Planning to Take Over the World Ltd.<br />
-      The Web<br />
-      The Internet<br />
-      A Server, Somewhere<br />
-      Earth<br />
-    </address>
+      <a href="" class="box box box__nav--padding div5" data-color="purple">→ Twitter</a>
 
-    <a href="">Careers for organics</a>
+      <a href="" class="box box box__nav--padding div2" data-color="blue">→ Careers for inorganics 💾</a>
 
-    <a href="">Careers for inorganics</a>
+      <a href="https://github.com/fac22/kindcode" target="_blank" class="box box box__nav--padding div3"
+        data-color="orange">→ GitHub</a>
+
+      <a href="" class="box box box__nav--padding div4" data-color="pink">→ Careers for organics 🌵</a>
+
+
+    </div>
   </footer>
 </body>
 
