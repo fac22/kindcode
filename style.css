@@ -164,6 +164,11 @@ h2 {
   margin-bottom: 20%;
 }
 
+.founder-img {
+  width: 25vw;
+  height: auto;
+}
+
 @media only screen and (min-width: 768px) {
   .img-with-text {
     display: flex;
