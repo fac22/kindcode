@@ -156,6 +156,7 @@ h2 {
 .img-with-text__img {
   width: 80%;
   height: auto;
+
 }
 
 .img-with-text__text {
@@ -172,12 +173,16 @@ h2 {
   }
 
   .img-with-text__img {
-    width: auto;
-    height: 75%;
+    /* width: auto;
+    height: 75%; */
+      padding: 3vw;
+  max-width: 33%;
   }
   
   .img-with-text__text {
-    margin-top: 10%;
-    margin-bottom: 20%;
+    /* margin-top: 10%;
+    margin-bottom: 20%; */
+  padding: 3vw;
+  width: 67%;
   }
 }
