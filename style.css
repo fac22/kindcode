@@ -153,12 +153,31 @@ h2 {
   padding-right: 5vw;
 }
 
-.img-with-text__text {
-  padding: 3vw;
-  max-width: 67%;
+.img-with-text__img {
+  width: 80%;
+  height: auto;
 }
 
-.img-with-text__img {
-  padding: 3vw;
-  width: 33%;
+.img-with-text__text {
+  margin-top: 10%;
+  margin-bottom: 20%;
+}
+
+@media only screen and (min-width: 768px) {
+  .img-with-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5vw;
+  }
+
+  .img-with-text__img {
+    width: auto;
+    height: 75%;
+  }
+  
+  .img-with-text__text {
+    margin-top: 10%;
+    margin-bottom: 20%;
+  }
 }
