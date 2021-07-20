@@ -20,7 +20,7 @@ html {
 }
 
 :root {
-  --box-shadow-size: 0.2rem 0.2rem;
+  --box-shadow-size: 0.3rem 0.3rem;
 }
 
 nav {
@@ -28,11 +28,14 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding-top: 2em;
-  padding-left: 1.4em;
-  padding-right: 2em;
-  font-size: min(4vw, 2em);
+  padding-top: 5vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  font-size: min(4vw, 1em);
+  z-index: 99;
 }
+
+
 
 body {
   font-family: 'Lab Mono Web', monospace;
@@ -50,8 +53,48 @@ a:visited {
   color: black;
 }
 
+p {
+  font-weight: normal;
+  line-height: 1.5em;
+}
+
+.margin-top-2rem {
+  margin-top: 2rem;
+}
+
+.box-image-fill {
+  width: 30%;
+  padding: 0.4rem;
+  margin-right: 1rem;
+}
+
+.flex {
+  display: flex;
+  align-content: center;
+}
+
+.flex-gap-2vw {
+  gap: 2vw;
+}
+
+.flex-equal-size {
+  flex-grow: 1;
+
+}
+
+.padding-8vw {
+  padding-left: 8vw;
+  padding-right: 8vw;
+}
+
+
 .section-full-height {
   height: 100vh;
+  position: relative;
+}
+
+.section-padding {
+    padding: 5vw;
 }
 
 h1 {
@@ -61,7 +104,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1em;
+  font-size: 1.2em;
    font-weight: normal;
 }
 
@@ -71,10 +114,14 @@ h2 {
   border-style: solid;
   border-radius: 0.6em;
   padding: 0.3rem;
-  margin: 0.2rem;
+
   background-color: white;
   padding: 0.5rem 0.8rem 0.5rem 0.8rem;
   
+}
+
+.box-margin {
+  margin-top: 2rem;
 }
 
 [data-color=purple] {
@@ -102,7 +149,8 @@ h2 {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  padding: 5vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 .img-with-text__text {
