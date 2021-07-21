@@ -42,23 +42,14 @@ body {
 
 }
 
-
 .box__button {
   display: block;
 }
 
 .box__button:link {
-
-}
-
-a {
-  cursor: pointer;
-  color: black;
-}
-
-a:link {
   text-decoration: none;
   color: black;
+  cursor: pointer;
 }
 
 .box__button:visited {
