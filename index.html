@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="style.css" />
 
-  <script defer src=""></script>
+  <script defer src="./script.js"></script>
 
   <meta name="description" content="kindCode helps make your code kinder with a kind of kind AI" />
 
@@ -23,42 +23,43 @@
   <!-- ====NAVIGATION==== -->
   <nav>
 
-    <div><a href="" class="box box__nav--padding" data-color="purple">kindCode</a></div>
+    <div><a class="box box__nav--padding js-logo" data-color="purple">kindCode</a></div>
 
     <div>
-      <a href="#nav-about" class="box box__nav--padding" data-color="pink">About</a>
-      <a href="#nav-team" class="box box__nav--padding" data-color="orange">Team</a>
+      <a class="box box__nav--padding js-about" data-color="pink">About</a>
+      <a class="box box__nav--padding js-team" data-color="orange">Team</a>
 
   </nav>
 
   <!-- ====NAVIGATION END==== -->
 
-
+  <!-- ====MAIN==== -->
   <main>
 
-    <section class="section__grid--left section__grid--margins section__grid--auto-rows">
+    <!-- ====SPLASH==== -->
+    <section id="nav-home" class="section__grid--left section__grid--margins section__grid--auto-rows">
 
       <div class="section__grid--item1">
         <img src="./images/kindCode-about-illustration.png" alt="Person with tablet device" />
       </div>
 
       <div class="section__grid--item2">
-        <h1 id="nav-home">kindCode</h1>
+        <h1>kindCode</h1>
         <p>We make code kinder with only the kindest kind of kind AI.</p>
       </div>
 
     </section>
+    <!-- ====SPLASH END==== -->
 
 
-
-    <section class="section__margin--bottom">
+    <section id="nav-about" class="section__flex--container  section__margin--bottom ">
 
 
       <div class="section__grid--right section__grid--margins">
 
         <div class="section__grid--item2">
 
-          <h2 id="nav-about" class="anchor">About us</h2>
+          <h2 class="anchor">About us</h2>
 
           <p>
             Born in the early 2020s, we leveraged the power of AI to choose our
@@ -102,7 +103,7 @@
 
 
 
-    <section>
+    <section id="nav-team" class="section__flex--container">
 
 
       <div class="section__grid--left section__grid--margins">
@@ -113,7 +114,7 @@
         </div>
 
         <div class="section__grid--item2">
-          <h2 id="nav-team">The Team</h2>
+          <h2>The Team</h2>
           <p>
             Don't panic! It's not all AI and robots! We've got humans too. <br><br>
             Let's meet them now..
