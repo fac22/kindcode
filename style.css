@@ -48,16 +48,17 @@ body {
 }
 
 .box__button:link {
-  
+
 }
 
 a {
   cursor: pointer;
+  color: black;
 }
 
 a:link {
   text-decoration: none;
-
+  color: black;
 }
 
 .box__button:visited {
@@ -126,10 +127,7 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-.box__nav-team {
-  margin-left: 0.5rem;
+  gap: 1rem;
 }
 
 .box__card--padding {
