@@ -42,6 +42,13 @@ body {
 
 }
 
+
+.box__button {
+  display: block;
+}
+
+.box__button:link {
+
 a {
   cursor: pointer;
 }
@@ -51,9 +58,19 @@ a:link {
 
 }
 
-a:visited {
+.box__button:visited {
   text-decoration: none;
   color: black;
+}
+
+.box__button:hover {
+  background-color: ivory;
+}
+
+.box__button:active {
+  background-color: ivory;
+  transform: translateX(0.3rem) translateY(0.3rem);
+  box-shadow: 0 0;
 }
 
 p {
@@ -101,6 +118,16 @@ li {
 
 .box__nav--padding {
    padding: 0.5rem 0.8rem 0.5rem 0.5rem;
+}
+
+.box__nav-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.box__nav-team {
+  margin-left: 0.5rem;
 }
 
 .box__card--padding {
