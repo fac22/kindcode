@@ -42,11 +42,18 @@ body {
 
 }
 
+
 .box__button {
   display: block;
 }
 
 .box__button:link {
+
+a {
+  cursor: pointer;
+}
+
+a:link {
   text-decoration: none;
 
 }
@@ -74,6 +81,7 @@ p {
 section {
   min-height: 100vh;
   position: relative;
+
 }
 
 h1 {
@@ -166,6 +174,13 @@ p:nth-of-type(2n) {
 
 
 /* SECTIONS */
+
+.section__flex--container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
 
 .section__grid--left, .section__grid--right  {
   display: grid;
@@ -339,3 +354,4 @@ grid-auto-rows: min-content;
 [data-color=orange] {
     box-shadow: var(--box-shadow-size) rgb(255, 220, 197);
 }
+
