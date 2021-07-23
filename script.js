@@ -1,3 +1,5 @@
+'use strict';
+
 const kindCodeLogo = document.querySelector('.js-logo');
 const aboutNavButton = document.querySelector('.js-about');
 const teamNavButton = document.querySelector('.js-team');
