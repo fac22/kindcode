@@ -23,3 +23,7 @@ teamNavButton.addEventListener('click', function () {
 });
 
 // ADD MEMBER
+
+const addMemberExpander = document.querySelector('#js-addMemberExpander');
+
+console.log(addMemberExpander);

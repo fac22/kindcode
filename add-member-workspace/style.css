@@ -336,3 +336,33 @@ address {
 }
 
 /* ADD MEMBER */
+
+.card__expander {
+  border: none;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.card__expander:hover {
+  cursor: pointer;
+}
+
+.box__card--flex-expander {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box__card--flex-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__hidden {
+  display: none;
+}

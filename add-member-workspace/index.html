@@ -182,6 +182,7 @@
           </article>
 
           <article
+            id="js-addMemberStart"
             class="box section__grid--full-height box__card--padding"
             data-color="pink"
           >
@@ -199,14 +200,52 @@
               </div>
             </div>
           </article>
+
+          <!-- ADD MEMBER START -->
+
+          <template id="js-memberCardTemplate">
+            <article
+              class="box section__grid--full-height box__card--padding"
+              data-color="pink"
+            >
+              <div class="section__grid--left--profile">
+                <div class="section__profile">
+                  <img src="" alt="" class="founder-img" />
+                </div>
+                <div>
+                  <h3></h3>
+                  <p class="section__cards--font"></p>
+                </div>
+              </div>
+            </article>
+          </template>
+
+          <article
+            class="
+              box
+              section__grid--full-height
+              box__card--padding box__card--flex-expander
+            "
+            data-color="pink"
+          >
+            <button id="js-addMemberExpander" class="card__expander">
+              ADD NEW MEMBER
+            </button>
+
+            <form>
+              <label for="name">Name:</label><br />
+              <input type="text" id="name" name="name" /><br />
+              <label for="jobDesc">Job description:</label><br />
+              <input type="text" id="jobDesc" name="jobDesc" /><br />
+              <label for="imgLink">Photo URL:</label><br />
+              <input type="text" id="imgLink" name="imgLink" /><br /><br />
+              <input type="submit" value="submit" />
+            </form>
+          </article>
         </div>
       </section>
 
-      <!-- ADD MEMBER -->
-
-      <section>
-        <h2 class="box">Add Member</h2>
-      </section>
+      <!-- ADD MEMBER END -->
     </main>
 
     <footer>
