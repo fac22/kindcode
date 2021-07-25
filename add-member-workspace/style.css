@@ -366,3 +366,14 @@ address {
 .card__hidden {
   display: none;
 }
+
+.add-member__submit {
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+  padding: 0.3rem;
+  border-style: solid;
+  border-radius: 0.6em;
+  border-width: 0.1rem;
+  border-color: black;
+}
