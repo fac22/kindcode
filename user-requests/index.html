@@ -37,56 +37,61 @@
   <main>
 
     <section id="nav-about" class="section__flex--container section__margin--bottom">
-      <div class="section__grid--right section__grid--margins">
-        <div class="section__grid--item2">
-          <h2 class="anchor">Submit Request</h2>
-          <form label="request-form">
-            <div>
-              <label for="name">Name</label>
-              <input type="text" name="name" id="1" placeholder="Enter your name" required />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input type="email" name="email" id="2" placeholder="Enter your email" required />
-            </div>
-            <div>
-              <label for="request">Request</label>
-              <textarea name="request" id="3" cols="40" rows="3" maxlength="149" placeholder="Enter your request"
-                required></textarea>
-            </div>
-            <div>
-              <label for="phrase">Phrase</label>
-              <input type="text" name="phrase" id="2" required>
-            </div>
-            <div>
+
+      <div class="section__grid--equal--2 section__grid--margin-top" id="requests">
+
+
+
+        <article class="box section__grid--full-height box__card--padding" data-color="pink">
+          <div class="section__grid--input">
+            <h3>📌 HOW-TO Submit a request</h3>
+            <p class="section__cards--font"><br>
+              Please fill in the form, including all the details of your request.</br>
+              </br>
+              The robots strive to respond to your messages as quickly as possible.</br>
+              </br>
+              If you've provided your contact details we may contact you for further information.
+            </p>
+          </div>
+        </article>
+
+        <article class="box section__grid--full-height box__card--padding" data-color="purple">
+          <div class="section__grid--input">
+
+            <form id="form--request">
+              <h3>Submit Request</h3>
+
+              <label for="name">
+                <h4>Name</h4>
+                <input type="text" name="name" id="1" placeholder="Enter your name" required />
+              </label>
+
+              <label for="email">
+                <h4>Email</h4>
+                <input type="email" name="email" id="2" placeholder="Enter your email" required />
+              </label>
+
+              <label for="request">
+                <h4>Request</h4>
+                <textarea name="request" id="3" cols="30" rows="5" maxlength="149" placeholder="Enter your request"
+                  required></textarea>
+              </label>
+
+              <label for="phrase">
+                <h4>Phrase</h4>
+                <input type="text" name="phrase" id="2" required>
+              </label>
+
               <button type="submit" name="submit">Submit</button>
-            </div>
-          </form>
-        </div>
 
-
-
-        <div class="section__grid--item1">
-          <img src="./images/kindCode-contact-us-illustration.png"
-            alt="A generic image representing the concept of dynamism" />
-        </div>
-      </div>
-
-      <div class="
-                    section__grid--single
-                    section__grid--margin-top
-                    section__grid--margins
-                  " id='requests'>
-        <article class="box section__grid--full-height box__card--padding" data-color="blue">
-          <h3>Dynamism</h3>
-          <p class="section__cards--font">
-            We are all about future thinking activity and progress, with a
-            hint of AI.
-          </p>
+            </form>
+          </div>
         </article>
       </div>
-    </section>
 
+
+
+    </section>
   </main>
 
   <footer>

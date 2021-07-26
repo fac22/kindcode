@@ -34,7 +34,7 @@ const phraseInput = document.querySelector("input[name='phrase']");
 const requestInput = document.querySelector("textarea[name='request']");
 const submitButton = document.querySelector("button[name='submit']");
 const requestDiv = document.getElementById('requests');
-const form = document.getElementsByTagName('form');
+const form = document.getElementById('form--request');
 
 function validateTweet(e) {
   e.preventDefault();
@@ -54,6 +54,17 @@ function validEmail(email) {
   return input.test(email);
 }
 
+// Returns a random positive whole number between two values (min, max)
+// Used throughout to select random array elements
+function randomNumber(min, max) {
+  return Math.round(Math.random() * (max - min) + min);
+}
+
+// Return random phrase from passPhrase array using randomNumber()
+function randomPhrase() {
+  return passPhrase[randomNumber(0, passPhrase.length - 1)];
+}
+
 let i = 0;
 
 function colourPicker() {
@@ -66,50 +77,46 @@ function colourPicker() {
   }
 }
 
-let j = 0;
+const currentPassPhrase = randomPhrase();
 
-let word1 = '';
-
-function phrasePicker() {
-  if (j >= 3) {
-    j = 0;
-    word1 = passPhrase[j];
-  } else {
-    word1 = passPhrase[j];
-    j++;
-  }
-  phraseInput.placeholder = `type '${word1}'`;
-}
-
-phrasePicker();
+phraseInput.placeholder = `type '${currentPassPhrase}'`;
 
 function postRequest(e) {
-  e.preventDefault();
+  e.preventDefault(e);
   const name = nameInput.value;
   const email = emailInput.value;
   const request = requestInput.value;
-  const phrase = phraseInput.value;
 
   if (
     name.length != 0 &&
     email.length != 0 &&
     request.length != 0 &&
-    phrase.length != 0
+    phraseInput.length != 0
   ) {
     if (validEmail(email)) {
       emailInput.setAttribute('aria-invalid', 'false');
-      if (phraseInput.value == `${word1}`) {
-        requestDiv.innerHTML += ` 
-        <article class="box section__grid--full-height box__card--padding" data-color="${colourPicker(
-          colourNames
-        )}">
-          <h3>${name} ${email}</h3>
+      if (phraseInput.value == `${currentPassPhrase}`) {
+        let article = document.createElement('article');
+        article.classList.add(
+          'box',
+          'section__grid--full-height',
+          'box__card--padding'
+        );
+        article.setAttribute('data-color', `${colourPicker()}`);
+        article.innerHTML = `
+        <div class="section__grid--input">
+          
           <p class="section__cards--font">
+          📌 From: ${name}<br>
+            📬 Email: ${email} <br><br>
             ${request}
           </p>
-        </article>`;
+        </div>`;
+
+        requestDiv.append(article);
+        form.reset();
+
         phraseInput.setAttribute('aria-invalid', 'false');
-        form[0].reset();
       } else {
         phraseInput.setAttribute('aria-invalid', 'true');
       }
