@@ -68,7 +68,7 @@ function memberBuilder() {
 }
 
 function memberAdder(newMemberHTML) {
-  document.querySelector('#js-memberCardTemplate').after(newMemberHTML);
+  document.querySelector('#js-formCard').before(newMemberHTML);
 }
 
 function passwordChecker(password) {
