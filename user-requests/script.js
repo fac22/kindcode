@@ -126,4 +126,6 @@ function postRequest(e) {
   }
 }
 
-submitButton.addEventListener('click', postRequest);
+submitButton.addEventListener('click', postRequest, {
+  once: true,
+});
