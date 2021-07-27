@@ -34,11 +34,11 @@ const colourNames = ['purple', 'blue', 'pink', 'orange'];
 
 const passPhrase = ['elephant', 'tiger', 'squid', 'robot'];
 
-const nameInput = document.querySelector("input[name='name']");
-const emailInput = document.querySelector("input[name='email']");
-const phraseInput = document.querySelector("input[name='phrase']");
-const requestInput = document.querySelector("textarea[name='request']");
-const submitButton = document.querySelector("button[name='submit']");
+const nameInput = document.querySelector("input[name='request-name']");
+const emailInput = document.querySelector("input[name='request-email']");
+const phraseInput = document.querySelector("input[name='request-phrase']");
+const requestInput = document.querySelector("textarea[name='request-request']");
+const submitButton = document.querySelector("button[name='request-submit']");
 const requestDiv = document.getElementById('requests');
 const form = document.getElementById('form--request');
 
@@ -71,7 +71,8 @@ function randomPhrase() {
   return passPhrase[randomNumber(0, passPhrase.length - 1)];
 }
 
-//Cycle through colourNames Array so that there is a different border for each request / member
+//  Cycle through colourNames Array so that there is a different border for each request / member
+
 let i = 0;
 
 function colourPicker() {
@@ -84,7 +85,7 @@ function colourPicker() {
   }
 }
 
-//Random 'I am not a robot' phrase generator
+//  Random 'I am not a robot' phrase generator
 
 const currentPassPhrase = randomPhrase();
 
@@ -99,14 +100,14 @@ function postRequest(e) {
   const request = requestInput.value;
 
   if (
-    name.length != 0 &&
-    email.length != 0 &&
-    request.length != 0 &&
-    phraseInput.length != 0
+    name.length !== 0 &&
+    email.length !== 0 &&
+    request.length !== 0 &&
+    phraseInput.length !== 0
   ) {
     if (validateEmail(email)) {
       emailInput.setAttribute('aria-invalid', 'false');
-      if (phraseInput.value == `${currentPassPhrase}`) {
+      if (phraseInput.value === `${currentPassPhrase}`) {
         let article = document.createElement('article');
         article.classList.add(
           'box',
@@ -153,24 +154,17 @@ const addMemberFormPassword = addMemberForm.querySelectorAll('input')[4];
 const addMemberFormSubmit = document.querySelector('#js-addMemberFormSubmit');
 const memberCardTemplate = document.querySelector('#js-memberCardTemplate');
 
-addMemberExpander.addEventListener('click', addMemberFormReveal);
-
 function addMemberFormReveal() {
   addMemberExpander.classList.add('card__hidden');
 
   addMemberForm.style = '';
 }
 
-addMemberFormSubmit.addEventListener('click', (event) => {
-  event.preventDefault();
+addMemberExpander.addEventListener('click', addMemberFormReveal);
 
-  if (passwordChecker(addMemberFormPassword.value)) {
-    memberAdder(memberBuilder());
-    newMemberFormReset();
-  } else {
-    alert("Uh uh uh! You didn't say the magic word!");
-  }
-});
+function passwordChecker(password) {
+  return password === 'password';
+}
 
 function memberBuilder() {
   const newMemberCard = memberCardTemplate.content.cloneNode(true);
@@ -190,10 +184,6 @@ function memberAdder(newMemberHTML) {
   document.querySelector('#js-formCard').before(newMemberHTML);
 }
 
-function passwordChecker(password) {
-  return password === 'password';
-}
-
 function newMemberFormReset() {
   addMemberFormName.value = '';
   addMemberFormJob.value = '';
@@ -203,5 +193,16 @@ function newMemberFormReset() {
   addMemberForm.style = 'display: none';
   addMemberExpander.classList.remove('card__hidden');
 }
+
+addMemberFormSubmit.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  if (passwordChecker(addMemberFormPassword.value)) {
+    memberAdder(memberBuilder());
+    newMemberFormReset();
+  } else {
+    alert("Uh uh uh! You didn't say the magic word!");
+  }
+});
 
 // ============ ADD MEMBER END =============
