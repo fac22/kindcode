@@ -38,6 +38,7 @@
   <!-- ====MAIN==== -->
   <main>
     <!-- ====SPLASH==== -->
+
     <section id="nav-home" class="
           section__grid--left section__grid--margins section__grid--auto-rows
         ">
@@ -50,7 +51,10 @@
         <p>We make code kinder with only the kindest kind of kind AI.</p>
       </div>
     </section>
+
     <!-- ====SPLASH END==== -->
+
+    <!-- ====ABOUT==== -->
 
     <section id="nav-about" class="section__flex--container section__margin--bottom">
       <div class="section__grid--right section__grid--margins">
@@ -104,6 +108,10 @@
       </div>
     </section>
 
+    <!-- ====ABOUT END==== -->
+
+    <!-- ====TEAM==== -->
+
     <section id="nav-team" class="section__flex--container">
       <div class="section__grid--left section__grid--margins">
         <div class="section__grid--item1">
@@ -145,15 +153,70 @@
             </div>
           </div>
         </article>
+
+        <template id="js-memberCardTemplate">
+          <article
+            class="box section__grid--full-height box__card--padding"
+            data-color="pink"
+          >
+            <div class="section__grid--left--profile">
+              <div class="section__profile">
+                <img src="" alt="" class="founder-img" />
+              </div>
+              <div>
+                <h3></h3>
+                <p class="section__cards--font"></p>
+              </div>
+            </div>
+          </article>
+        </template>
+
+        <article
+          id="js-formCard"
+          class="
+            box
+            section__grid--full-height
+            box__card--padding box__card--flex-expander
+          "
+          data-color="pink"
+        >
+          <button id="js-addMemberExpander" class="card__expander">
+            ADD NEW MEMBER
+          </button>
+
+          <form id="js-addMemberForm" style="display: none">
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" /><br />
+            <label for="jobDesc">Job description:</label><br />
+            <input type="text" id="jobDesc" name="jobDesc" /><br />
+            <label for="imgLink">Photo URL:</label><br />
+            <input type="url" id="imgLink" name="imgLink" /><br />
+            <label for="imgAlt">Photo alt text:</label><br />
+            <input type="text" id="imgAlt" name="imgAlt" /><br /><br />
+            <label for="addMemberPassword">Password:</label><br />
+            <input
+              type="password"
+              id="addMemberPassword"
+              name="addMemberPassword"
+            /><br /><br />
+            <input
+              id="js-addMemberFormSubmit"
+              type="submit"
+              value="submit"
+              class="add-member__submit"
+            />
+          </form>
+        </article>
       </div>
     </section>
+
+    <!-- ====TEAM END==== -->
+    
+    <!-- ====REQUEST==== -->
 
     <section id="nav-request" class="section__flex--container section__margin--bottom">
 
       <div class="section__grid--equal--2 section__grid--margin-top" id="requests">
-
-
-
         <article class="box section__grid--full-height box__card--padding" data-color="pink">
           <div class="section__grid--input">
             <h3>📌 Submit a request</h3>
@@ -169,7 +232,6 @@
 
         <article class="box section__grid--full-height box__card--padding" data-color="purple">
           <div class="section__grid--input">
-
             <form id="form--request">
               <label for="name">
                 <h4>Name</h4>
@@ -193,12 +255,13 @@
               </label>
 
               <button type="submit" name="submit">Submit</button>
-
             </form>
           </div>
         </article>
       </div>
     </section>
+
+    <!-- ====REQUEST END==== -->
   </main>
 
   <footer>
