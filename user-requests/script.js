@@ -36,7 +36,7 @@ const submitButton = document.querySelector("button[name='submit']");
 const requestDiv = document.getElementById('requests');
 const form = document.getElementById('form--request');
 
-function validateTweet(e) {
+function validateLength(e) {
   e.preventDefault();
   const length = requestInput.value.length;
   if (length > 140) {
@@ -46,9 +46,9 @@ function validateTweet(e) {
   }
 }
 
-requestInput.addEventListener('input', validateTweet);
+requestInput.addEventListener('input', validateLength);
 
-function validEmail(email) {
+function validateEmail(email) {
   const input =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return input.test(email);
@@ -65,6 +65,7 @@ function randomPhrase() {
   return passPhrase[randomNumber(0, passPhrase.length - 1)];
 }
 
+//Cycle through colourNames Array so that there is a different border for each request / member
 let i = 0;
 
 function colourPicker() {
@@ -77,9 +78,13 @@ function colourPicker() {
   }
 }
 
+//Random 'I am not a robot' phrase generator
+
 const currentPassPhrase = randomPhrase();
 
 phraseInput.placeholder = `type '${currentPassPhrase}'`;
+
+// Check and Post request
 
 function postRequest(e) {
   e.preventDefault(e);
@@ -93,7 +98,7 @@ function postRequest(e) {
     request.length != 0 &&
     phraseInput.length != 0
   ) {
-    if (validEmail(email)) {
+    if (validateEmail(email)) {
       emailInput.setAttribute('aria-invalid', 'false');
       if (phraseInput.value == `${currentPassPhrase}`) {
         let article = document.createElement('article');
@@ -126,6 +131,4 @@ function postRequest(e) {
   }
 }
 
-submitButton.addEventListener('click', postRequest, {
-  once: true,
-});
+submitButton.addEventListener('click', postRequest);
