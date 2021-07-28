@@ -144,6 +144,7 @@ submitButton.addEventListener('click', postRequest);
 
 // ============== ADD MEMBER ===============
 
+const addMemberFormCard = document.querySelector('#js-formCard');
 const addMemberExpander = document.querySelector('#js-addMemberExpander');
 const addMemberForm = document.querySelector('#js-addMemberForm');
 const addMemberFormName = addMemberForm.querySelectorAll('input')[0];
@@ -185,7 +186,18 @@ function memberBuilder() {
 }
 
 function memberAdder(newMemberHTML) {
-  document.querySelector('#js-formCard').before(newMemberHTML);
+  addMemberFormCard.before(newMemberHTML);
+}
+
+function addMemberColourChanger() {
+  addMemberFormCard.setAttribute(
+    'data-color',
+    `${
+      i === colourNames.length - 1
+        ? `${colourNames[0]}`
+        : `${colourNames[i + 1]}`
+    }`
+  );
 }
 
 function newMemberFormReset() {
@@ -202,7 +214,9 @@ addMemberFormSubmit.addEventListener('click', (event) => {
   event.preventDefault();
 
   if (passwordChecker(addMemberFormPassword.value)) {
+    const color = '';
     memberAdder(memberBuilder());
+    addMemberColourChanger();
     newMemberFormReset();
   } else {
     alert("Uh uh uh! You didn't say the magic word!");
