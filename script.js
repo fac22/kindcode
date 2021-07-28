@@ -30,7 +30,7 @@ requestNavButton.addEventListener('click', function () {
 
 // ============== SUBMIT REQUEST ===============
 
-const colourNames = ['purple', 'blue', 'pink', 'orange'];
+const colourNames = ['purple', 'blue', 'orange', 'pink'];
 
 const passPhrase = ['elephant', 'tiger', 'squid', 'robot'];
 
@@ -176,6 +176,10 @@ function memberBuilder() {
   newMemberCard.querySelector('img').src = addMemberFormImg.value;
 
   newMemberCard.querySelector('img').alt = addMemberFormImgAlt.value;
+
+  const article = newMemberCard.querySelector('.box');
+
+  article.setAttribute('data-color', `${colourPicker()}`);
 
   return newMemberCard;
 }
