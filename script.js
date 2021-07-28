@@ -155,6 +155,38 @@ const addMemberFormPassword = addMemberForm.querySelectorAll('input')[4];
 const addMemberFormSubmit = document.querySelector('#js-addMemberFormSubmit');
 const memberCardTemplate = document.querySelector('#js-memberCardTemplate');
 
+function validateURL() {
+  const regexURL =
+    /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
+  if (!regexURL.test(addMemberFormImg.value)) {
+    addMemberFormImg.setAttribute('aria-invalid', 'true');
+  } else {
+    addMemberFormImg.setAttribute('aria-invalid', 'false');
+  }
+}
+
+addMemberFormImg.addEventListener('input', validateURL);
+
+function validateNameLength() {
+  if (addMemberFormName.value.length > 20) {
+    addMemberFormName.setAttribute('aria-invalid', 'true');
+  } else {
+    addMemberFormName.setAttribute('aria-invalid', 'false');
+  }
+}
+
+addMemberFormName.addEventListener('input', validateNameLength);
+
+function validateJobLength() {
+  if (addMemberFormJob.value.length > 20) {
+    addMemberFormJob.setAttribute('aria-invalid', 'true');
+  } else {
+    addMemberFormJob.setAttribute('aria-invalid', 'false');
+  }
+}
+
+addMemberFormJob.addEventListener('input', validateJobLength);
+
 function addMemberFormReveal() {
   addMemberExpander.classList.add('card__hidden');
 
@@ -213,13 +245,35 @@ function newMemberFormReset() {
 addMemberFormSubmit.addEventListener('click', (event) => {
   event.preventDefault();
 
-  if (passwordChecker(addMemberFormPassword.value)) {
-    const color = '';
-    memberAdder(memberBuilder());
-    addMemberColourChanger();
-    newMemberFormReset();
+  if (
+    addMemberFormName.value === '' ||
+    addMemberFormJob.value === '' ||
+    addMemberFormImg.value === '' ||
+    addMemberFormImgAlt.value === '' ||
+    addMemberFormPassword.value === ''
+  ) {
+    alert('Please fill out all sections!');
   } else {
-    alert("Uh uh uh! You didn't say the magic word!");
+    if (
+      addMemberFormName.getAttribute('aria-invalid') === 'true' ||
+      addMemberFormJob.getAttribute('aria-invalid') === 'true'
+    ) {
+      alert(
+        'Name or job description too long! Keep them to 20 characters or less!'
+      );
+    } else {
+      if (addMemberFormImg.getAttribute('aria-invalid') === 'true') {
+        alert('Image URL is not valid! Sort it out!');
+      } else {
+        if (passwordChecker(addMemberFormPassword.value)) {
+          memberAdder(memberBuilder());
+          addMemberColourChanger();
+          newMemberFormReset();
+        } else {
+          alert("Uh uh uh! You didn't say the magic word!");
+        }
+      }
+    }
   }
 });
 

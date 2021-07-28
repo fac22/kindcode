@@ -367,7 +367,7 @@ address {
 }
 
 [aria-invalid='true'] {
-  box-shadow: 0 0 0 3px rgb(187, 186, 255);
+  box-shadow: 0 0 0 3px rgb(252, 119, 119);
 }
 
 label {
