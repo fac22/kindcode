@@ -1,4 +1,4 @@
-### kindCODE Agency Site
+### kindCode Agency Site
 
 "We make code kinder with only the kindest kind of kind AI."
 
